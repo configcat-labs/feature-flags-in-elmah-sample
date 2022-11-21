@@ -5,17 +5,56 @@
         <h1 class="intro-title">Email marketing without the hassle?</h1>
       </div>
       <div class="intro-button-wrapper">
-        <button class="intro-button">Show me how</button>
+        <button @click="handleUserSignup" class="intro-button">
+          Show me how
+        </button>
       </div>
     </div>
   </section>
 </template>
 
+<script>
+import Elmahio from "elmah.io.javascript";
+import { useFetch } from "@vueuse/core";
+
+export default {
+  setup() {
+    const logger = new Elmahio({
+      apiKey: "7a2ca5201f4f41348b30d9b895d71724",
+      logId: "12a66ce3-a7de-42da-887e-3040437c42c8",
+      application: "My marketing startup site",
+    });
+
+    return {
+      logger,
+    };
+  },
+  data() {
+    return {
+      salePromotions: [],
+    };
+  },
+  methods: {
+    handleUserSignup() {
+      const url = "https://my-promotions-api/get-promotions";
+
+      const { error, data } = useFetch(url);
+
+      if (error) {
+        console.log(error);
+        this.logger.error("Could not fetch sale promotions");
+      }
+
+      // Do something with data
+    },
+  },
+};
+</script>
 
 <style lang="scss">
 .intro-section {
   height: 65vh;
-  background-color: #FFBF00;
+  background-color: #ffbf00;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,8 +79,5 @@
     color: whitesmoke;
     text-transform: uppercase;
   }
-
 }
-
-
 </style>

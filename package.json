@@ -7,6 +7,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vueuse/core": "^9.5.0",
+    "elmah.io.javascript": "^3.7.1",
     "package.json": "^2.0.1",
     "vue": "^3.2.41"
   },

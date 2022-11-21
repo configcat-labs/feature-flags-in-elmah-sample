@@ -8,6 +8,7 @@
 <script>
 import Navbar from './Navbar.vue';
 import Banner from './Banner.vue';
+
   export default {
     components: {
       Navbar, Banner
