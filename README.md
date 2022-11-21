@@ -1,4 +1,4 @@
-# Using feature flags wit Elmah (WIP: 🚧)
+# Using feature flags with Elmah (WIP: 🚧)
 
 Read the blog post [here](https://configcat.com/blog/)
 
