@@ -1,10 +1,9 @@
 <script>
 import Header from './components/Header.vue';
-import Product from './components/Product.vue';
 
 export default {
   components: {
-    Header, Navbar, Product
+    Header
   }
 }
 
@@ -13,6 +12,6 @@ export default {
 <template>
   <Header />
   <main>
-    <Product></Product>
+
   </main>
 </template>
