@@ -16,12 +16,13 @@
 <script>
 import Elmahio from "elmah.io.javascript";
 import { useFetch } from "@vueuse/core";
+import { featureFlagStore } from "../store";
 
 export default {
   setup() {
     const logger = new Elmahio({
-      apiKey: "7a2ca5201f4f41348b30d9b895d71724",
-      logId: "12a66ce3-a7de-42da-887e-3040437c42c8",
+      apiKey: "YOUR_ELMAH_API_KEY",
+      logId: "YOUR_ELMAH_LOG_ID",
       application: "My marketing startup site",
     });
 
@@ -35,14 +36,18 @@ export default {
     };
   },
   methods: {
-    handleUserSignup() {
+    async handleUserSignup() {
       const url = "https://my-promotions-api/get-promotions";
 
       const { error, data } = useFetch(url);
 
       if (error) {
-        console.log(error);
-        this.logger.error("Could not fetch sale promotions");
+        // console.log(error);
+        const isPromotionApiErrorFlagEnabled =
+          await featureFlagStore.getPromotionsApiErrorFlagStatus();
+        if (isPromotionApiErrorFlagEnabled) {
+          this.logger.error("Could not fetch sale promotions");
+        }
       }
 
       // Do something with data

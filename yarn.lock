@@ -186,6 +186,18 @@ capture-stack-trace@^1.0.0:
   optionalDependencies:
     fsevents "~2.3.2"
 
+configcat-common@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/configcat-common/-/configcat-common-6.0.1.tgz#688619f6730c02de8dcef0d6344a98992135e7d9"
+  integrity sha512-WrRT1+C/AXbRhMspjz5r/2MYawqOYJB+92vbSCaWHB9qmXHDaS6fhmGSo5mtrFCV/RBF/uiJXlUSRzz6lnDxfg==
+
+configcat-js@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/configcat-js/-/configcat-js-6.0.1.tgz#a8d765dd81b88bb132d3734d4aa4d4f8431ff007"
+  integrity sha512-12VtfNzKM1B6qg1BLQ7w5u9exM6uoF7hBjOpubQnjI92JBfKYLaSN+EysaFGjmnnHYywZ1u31EMBnTc2NMgW/w==
+  dependencies:
+    configcat-common "^6.0.1"
+
 core-util-is@~1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.3.tgz#a6042d3634c2b27e9328f837b965fac83808db85"
