@@ -1,14 +1,33 @@
-# Using feature flags with Elmah (WIP: 🚧)
+# Using ConfigCat's feature flags with Elmah
 
 Read the blog post [here](https://configcat.com/blog/)
 
-A few words about the contents of the repository. Whats is this application about, what does it demonstrate? Add a backlink to https://configcat.com
+This is a fictional website for a marketing company made with Vue.js. It was used in the accompanying article to demonstrate how to use feature flags alongside an application monitoring platform called [Elmah](https://elmah.io/).
 
 ## Build & Run
 
-Instructions on how to build and run the application locally. A student or junior developer should be able to run the application.
-- Prerequisites
-- Steps, commands to run
+### Prerequisites
+- [NodeJS](https://nodejs.org/en/) (version 16 or higher)
+
+### Running the app
+
+**1.** Clone the [this repository](https://github.com/configcat-labs/feature-flags-with-elmah-sample).
+
+**2.** Run the following commands to install the required NPM packages and run the app:
+
+```sh
+yarn add package.json
+```
+
+```sh
+yarn dev
+```
+
+**3.** You should be able to view the app in your browser by visiting [http://localhost:5173/](http://localhost:5173/).
+
+**4.** Here's what it should look like:
+
+![A/B Versions](sample-app.png)
 
 ## Learn more
 
